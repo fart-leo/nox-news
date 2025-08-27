@@ -1,9 +1,17 @@
 import './globals.css'
-export const metadata = {
+import type { Metadata } from 'next'
+import React from 'react'
+
+export const metadata: Metadata = {
   title: 'NOX — крипто-новости',
-  description: 'Автопополняемый сайт новостей о крипте'
+  description: 'Автопополняемый сайт новостей о крипте',
 }
-export default function RootLayout({ children }) {
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="ru">
       <body className="min-h-screen bg-black text-white">
